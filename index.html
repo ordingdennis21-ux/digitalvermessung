@@ -64,19 +64,26 @@ h3{font-size:1.2rem;font-weight:700;font-stretch:105%}
 .menu-btn{display:none;background:none;border:2px solid var(--ink);border-radius:4px;padding:.45rem .8rem;font:700 .95rem var(--head);color:var(--ink);cursor:pointer}
 
 /* Hero */
-.hero{background:var(--paper);overflow:hidden;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:32px;align-items:center;min-height:min(680px,calc(100vh - 72px));padding-top:56px;padding-bottom:56px}
+.hero{background:#0a1a30;color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center;min-height:min(700px,calc(100vh - 72px));padding-top:56px;padding-bottom:56px}
 .hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);font-weight:800;font-stretch:118%}
-.hero p{font-size:1.2rem;color:var(--ink-soft);max-width:46ch;margin:1.4rem 0 2rem}
+.hero p{font-size:1.2rem;color:#c3cfdd;max-width:46ch;margin:1.4rem 0 2rem}
 .cta-row{display:flex;gap:.9rem;flex-wrap:wrap}
-.who{margin-top:2rem;font-size:.98rem;color:var(--ink-soft)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.hero .who{margin:2rem 0 0;font-size:.98rem;color:#93a4b8}
+.scan{position:relative;aspect-ratio:1/0.86;width:112%;margin-right:-12%}
+.scan canvas{position:absolute;inset:0;width:100%;height:100%}
+.scan-note{position:absolute;left:6%;bottom:3%;display:flex;align-items:center;gap:.6rem;font:600 .82rem var(--head);color:#93a4b8}
+.scan-note i{width:8px;height:8px;border-radius:50%;background:var(--laser)}
+.scan-note b{color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+
 .shot{margin:0}
 .shot img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:4px;background:var(--ink)}
-.shot figcaption{display:flex;align-items:center;gap:.6rem;margin-top:.7rem;font:600 .85rem var(--head);color:var(--ink-soft)}
-.shot figcaption::before,.shot figcaption::after{content:"";flex:1;height:1px;background:var(--line)}
+.shot figcaption{margin-top:.7rem;font:600 .85rem var(--head);color:var(--ink-soft)}
 
 /* Kennzahlen */
-.facts{background:var(--ink);color:#fff}
+.facts{background:var(--ink);color:#fff;border-top:1px solid rgba(255,255,255,.12)}
 .facts ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
 .facts li{padding:28px 24px;border-left:1px solid rgba(255,255,255,.14)}
 .facts li:first-child{border-left:0;padding-left:0}
@@ -111,9 +118,9 @@ h3{font-size:1.2rem;font-weight:700;font-stretch:105%}
 
 /* Zielgruppen */
 .two{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
-.groups{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:2px solid var(--ink)}
-.groups div{padding:22px 22px 22px 0;border-bottom:1px solid var(--line)}
-.groups p{color:var(--ink-soft);font-size:.98rem;margin-top:.3rem}
+.tasks{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:32px;border-top:2px solid var(--ink)}
+.tasks li{padding:16px 0 16px 1.6rem;border-bottom:1px solid var(--line);position:relative;font-weight:600}
+.tasks li::before{content:"";position:absolute;left:0;top:1.55rem;width:9px;height:9px;background:var(--laser);border-radius:50%}
 
 /* Formate */
 .formats{margin-top:40px;width:100%;border-collapse:collapse}
@@ -162,6 +169,8 @@ label{font-weight:600;font-size:.95rem;display:block}
 input,select,textarea{width:100%;margin-top:6px;padding:.8rem .9rem;border:1.5px solid var(--line);border-radius:4px;font:inherit;color:inherit;background:#fff}
 input:focus,select:focus,textarea:focus{outline:0;border-color:var(--ink);box-shadow:0 0 0 3px rgba(15,36,64,.14)}
 form .btn{width:100%;text-align:center}
+.check{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.92rem}
+.check input{width:auto;margin-top:.25rem}
 .hint{font-size:.88rem;color:var(--ink-soft)}
 
 /* Fuß */
@@ -179,7 +188,8 @@ footer .brand{color:#fff;margin-bottom:1rem}
 .bar .btn{flex:1;text-align:center;padding:.8rem .5rem}
 
 @media(max-width:980px){
-  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:40px}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:40px;padding-bottom:24px}
+  .scan{width:100%;margin:0 auto;max-width:560px}
   .services{grid-template-columns:1fr 1fr}
   .chain{grid-template-columns:1fr;gap:26px}
   .chain li{padding-left:58px}
@@ -199,7 +209,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
   .menu-btn{display:block}
   .nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;padding:20px 24px;gap:1.1rem}
   .nav.open{display:flex}
-  .groups,.refs,.row,.fgrid,.services{grid-template-columns:1fr}
+  .tasks,.refs,.row,.fgrid,.services{grid-template-columns:1fr}
   .about img{aspect-ratio:4/3}
   .formats th,.formats td{display:block;width:100%}
   .formats th{border-bottom:0;padding-bottom:4px}
@@ -220,7 +230,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#ablauf">Ablauf</a>
-      <a href="#einblicke">Einblicke</a>
+      <a href="#ergebnisse">Ergebnisse</a>
       <a href="#referenzen">Referenzen</a>
       <a href="#ueber-uns">Über uns</a>
       <a href="tel:+4915201300728" class="tel">+49 1520 1300728</a>
@@ -232,19 +242,19 @@ footer .brand{color:#fff;margin-bottom:1rem}
 <main>
 <section class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <h1>Präzise Bestandsdaten für sichere Planung</h1>
-      <p>Wir vermessen Gebäude, Fassaden und Anlagen mit 3D-Laserscanner und Drohne. Sie erhalten Punktwolken, CAD-Pläne und BIM-Modelle, mit denen Ihr Team sofort weiterplanen kann.</p>
+      <p>Als Vermessungsbüro erfassen wir Gebäude, Innenräume, Fassaden und Außenbereiche mit 3D-Laserscanning und Drohnenvermessung. Die Daten bereiten wir für Ihre weitere Planung auf.</p>
       <div class="cta-row">
-        <a href="#kontakt" class="btn btn-main">Angebot anfragen</a>
-        <a href="#leistungen" class="btn btn-line">Leistungen ansehen</a>
+        <a href="#kontakt" class="btn btn-main">Vermessungsprojekt anfragen</a>
+        <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
       </div>
-      <p class="who">Für Architekten, Ingenieurbüros, Eigentümer und Projektentwickler. Sitz in Ingolstadt, bundesweit im Einsatz.</p>
+      <p class="who">Für Architekten, Ingenieurbüros, Bauherren und Projektentwickler. Sitz in Ingolstadt, Projekte in ganz Deutschland.</p>
     </div>
-    <figure class="shot">
-      <img src="img/punktwolke-fassade.jpg" alt="Farbige Punktwolke einer Gebäudefassade mit Außentreppe" width="1400" height="1050">
-      <figcaption>Punktwolke einer Fassade, eingefärbt nach Höhe</figcaption>
-    </figure>
+    <div class="scan" role="img" aria-label="Animation: Ein Gebäude wird per Laserscan Punkt für Punkt erfasst">
+      <canvas id="cloud"></canvas>
+      <div class="scan-note"><i></i><span id="scanState">Scan läuft</span><b id="scanCount">0 Punkte</b></div>
+    </div>
   </div>
 </section>
 
@@ -316,6 +326,25 @@ footer .brand{color:#fff;margin-bottom:1rem}
   </div>
 </section>
 
+<section class="band band-paper" id="ergebnisse">
+  <div class="wrap about">
+    <figure class="shot">
+      <img src="img/punktwolke-fassade.jpg" alt="Farbige Punktwolke einer Gebäudefassade mit Außentreppe" loading="lazy">
+      <figcaption>Punktwolke einer Fassade, eingefärbt nach Höhe</figcaption>
+    </figure>
+    <div>
+      <h2>Was Sie erhalten</h2>
+      <p class="intro">Wir liefern genau die Daten, die Ihr Projekt braucht. Und zwar so aufbereitet, dass Sie in Architektur, Planung und Abstimmung direkt damit arbeiten können.</p>
+      <ul>
+        <li>Georeferenzierte Punktwolken</li>
+        <li>CAD-Pläne und 2D-Bestandszeichnungen</li>
+        <li>3D-Bestandsmodelle und BIM-Modelle</li>
+        <li>Grundlagen für Flächen- und Massenermittlung</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="band band-ink" id="ablauf">
   <div class="wrap">
     <h2>In fünf Schritten vom Gebäude zum Datensatz</h2>
@@ -333,17 +362,20 @@ footer .brand{color:#fff;margin-bottom:1rem}
 <section class="band">
   <div class="wrap two">
     <div>
-      <h2>Für wen wir arbeiten</h2>
-      <p class="intro">Unsere Daten sind die Grundlage für Umbau, Sanierung, Erweiterung und Dokumentation.</p>
+      <h2>Leistungen für Ihre Planung</h2>
+      <p class="intro">Ob Wohngebäude, Gewerbeobjekt oder komplexer Gebäudebestand: Wir unterstützen Architekten, Ingenieure, Bauunternehmen und öffentliche Auftraggeber.</p>
     </div>
-    <div class="groups">
-      <div><h3>Architekten</h3><p>Verlässliche Bestandspläne als Basis für Entwurf und Ausführung.</p></div>
-      <div><h3>Ingenieurbüros</h3><p>Punktwolken und Modelle für Tragwerk, TGA und Anlagenplanung.</p></div>
-      <div><h3>Eigentümer</h3><p>Nachvollziehbare Dokumentation von Gebäuden und Flächen.</p></div>
-      <div><h3>Projektentwickler</h3><p>Belastbare Daten für Entscheidungen, bevor geplant wird.</p></div>
-      <div><h3>Industrie</h3><p>Hallen, Rohrleitungen und Maschinenparks, erfasst im laufenden Betrieb.</p></div>
-      <div><h3>Denkmalpflege</h3><p>Dokumentation für Restaurierung und Archivierung.</p></div>
-    </div>
+    <ul class="tasks">
+      <li>Bestandsaufnahme vor Umbau und Sanierung</li>
+      <li>Aufmaß für Architektur- und Ausführungsplanung</li>
+      <li>Digitale Dokumentation von Bestandsgebäuden</li>
+      <li>Fassaden- und Dachvermessung</li>
+      <li>3D-Erfassung von Innenräumen</li>
+      <li>Planerstellung aus Punktwolkendaten</li>
+      <li>BIM-Modellierung im Bestand</li>
+      <li>Flächenberechnung und Datengrundlagen für die Projektentwicklung</li>
+    </ul>
+  </div>
   </div>
 </section>
 
@@ -398,7 +430,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
     <img src="img/scanner-halle.jpg" alt="Mobiler Scanner bei der Erfassung einer Industriehalle" loading="lazy">
     <div>
       <h2>Präzise erfasst, sinnvoll aufbereitet</h2>
-      <p class="intro">Digitale Vermessung wurde gegründet, um Architekten, Ingenieuren und Immobilienbesitzern moderne Vermessungslösungen anzubieten.</p>
+      <p class="intro">Digitale Vermessung wurde gegründet, um Architekten, Ingenieuren und Immobilienbesitzern modernste Vermessungslösungen zu bieten. Unser Ziel: präzise Daten als solide Grundlage für erfolgreiche Planungen.</p>
       <ul>
         <li>Zertifizierte Fachleute begleiten Sie vom ersten Kontakt bis zum Projektabschluss.</li>
         <li>Sie haben einen festen, persönlichen Ansprechpartner.</li>
@@ -447,6 +479,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
         </select>
       </label>
       <label>Ihr Projekt<textarea name="nachricht" rows="4" placeholder="Objekt, Ort, ungefähre Fläche, gewünschtes Ergebnis"></textarea></label>
+      <label class="check"><input type="checkbox" required> Ich bin damit einverstanden, dass diese Daten zur Kontaktaufnahme verarbeitet werden. Die Einwilligung kann ich jederzeit widerrufen.</label>
       <button class="btn btn-main" type="submit">Anfrage per E-Mail senden</button>
       <p class="hint">Öffnet Ihr E-Mail-Programm mit der fertigen Anfrage. Hinweise zur Datenverarbeitung stehen in der <a href="https://www.digitalevermessung.de/datenschutzerklaerung/">Datenschutzerklärung</a>.</p>
     </form>
@@ -507,6 +540,79 @@ document.getElementById('form').addEventListener('submit',e=>{
   location.href='mailto:info@digitalevermessung.de?subject='+encodeURIComponent('Projektanfrage: '+f.get('leistung'))+'&body='+encodeURIComponent(body);
 });
 
+
+// Hero: Ein Gebäude wird Punkt für Punkt gescannt, eingefärbt nach Höhe
+(function(){
+  const c=document.getElementById('cloud'),x=c.getContext('2d');
+  const stateEl=document.getElementById('scanState'),countEl=document.getElementById('scanCount');
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  let seed=11;const rnd=()=>(seed=(seed*16807)%2147483647)/2147483647;
+  const W=1.7,H=1.3,D=.85,R=.45,TOP=H+R;
+  const NB=14,B=Array.from({length:NB},()=>[]);
+  const ramp=t=>{const h=235-t*235;return 'hsl('+h.toFixed(0)+' 92% '+(52+t*6).toFixed(0)+'%)'};
+  const COL=B.map((_,i)=>ramp(i/(NB-1)));
+  let total=0;
+  const add=(a,b,d,j)=>{j=j||.012;const y=b+(rnd()-.5)*j;const k=Math.max(0,Math.min(NB-1,Math.floor(y/TOP*NB)));B[k].push(a+(rnd()-.5)*j,y,d+(rnd()-.5)*j);total++};
+  const win=(u,v)=>{ // Fensterraster über drei Geschosse
+    const col=((u+W)/(2*W))*7,fr=col-Math.floor(col);
+    const row=v/H*3,fv=row-Math.floor(row);
+    return fr>.3&&fr<.7&&fv>.32&&fv<.78;
+  };
+  for(let i=0;i<9000;i++){const u=(rnd()*2-1)*W,v=rnd()*H;
+    if(!win(u,v)&&!(Math.abs(u+W*.14)<.14&&v<.36)) add(u,v,D);
+    if(!win(u,v)) {if(rnd()<.7) add(u,v,-D)}
+    else if(rnd()<.25) add(u,v,D-.05); // Fensterlaibung, dünn
+  }
+  for(let i=0;i<3600;i++){const d=(rnd()*2-1)*D,v=rnd()*TOP;
+    if(v>H+R*(1-Math.abs(d)/D)) continue;
+    const fv=(v/H*3)%1; if(v<H&&Math.abs(d)<.22&&fv>.32&&fv<.78) continue;
+    add(W,v,d);add(-W,v,d);}
+  for(let i=0;i<6000;i++){const u=(rnd()*2-1)*(W+.07),d=(rnd()*2-1)*(D+.07);add(u,H+R*(1-Math.abs(d)/D)+.015,d)}
+  for(let k=0;k<3;k++){ // Gesimse zwischen den Geschossen
+    for(let i=0;i<500;i++) add((rnd()*2-1)*W,H*(k+1)/3,D+.03,.02);}
+  for(let i=0;i<900;i++){ // Außentreppe an der Giebelseite
+    const t=rnd(),w=rnd()*.34; add(W+.06+w,t*H*.66,-D*.7+t*1.2,.02);
+    if(rnd()<.5) add(W+.06+(rnd()<.5?0:.34),t*H*.66+.16,-D*.7+t*1.2,.015);}
+  for(const [tx,tz] of [[-2.5,.9],[2.75,-.2],[-2.2,-1.3]]){ // Bäume
+    for(let i=0;i<520;i++){const a=rnd()*6.283,b=Math.acos(rnd()*2-1),r=.42*Math.cbrt(rnd());
+      add(tx+r*Math.sin(b)*Math.cos(a),.95+r*Math.cos(b)*1.15,tz+r*Math.sin(b)*Math.sin(a),.03);}
+    for(let i=0;i<70;i++) add(tx,rnd()*.6,tz,.05);}
+  for(let i=0;i<5200;i++){const a=rnd()*6.283,r=Math.sqrt(rnd())*3.6;if(rnd()<r/4)continue;add(Math.cos(a)*r,0,Math.sin(a)*r*.75,.01)}
+
+  let w,h,dpr,t0=null,vis=true;
+  const fmt=n=>n.toLocaleString('de-DE');
+  function size(){dpr=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  const X0=-3.7,X1=3.7,SCAN=5200;
+  function draw(t){
+    if(t0===null) t0=t; const el=t-t0;
+    x.clearRect(0,0,w,h);
+    const prog=still?1:Math.min(1,el/SCAN);
+    const front=X0+(X1-X0)*prog;
+    const ang=.58+(still?0:Math.sin(el*.00016)*.32),ca=Math.cos(ang),sa=Math.sin(ang);
+    const tilt=.3,ct=Math.cos(tilt),st=Math.sin(tilt);
+    const s=Math.min(w/6.3,h/3.7);
+    let shown=0;const hot=[];
+    for(let k=0;k<NB;k++){
+      const a=B[k];x.fillStyle=COL[k];
+      for(let i=0;i<a.length;i+=3){
+        const px0=a[i]; if(px0>front) continue; shown++;
+        const X=px0*ca-a[i+2]*sa,Z=px0*sa+a[i+2]*ca;
+        const Y=a[i+1]*ct-Z*st,Zz=a[i+1]*st+Z*ct;
+        const q=6/(6+Zz),sx=w*.5+X*s*q,sy=h*.74-Y*s*q;
+        if(prog<1&&front-px0<.05){hot.push(sx,sy);continue}
+        const r=1.25*q; x.fillRect(sx,sy,r,r);
+      }
+    }
+    x.fillStyle='#fff';
+    for(let i=0;i<hot.length;i+=2) x.fillRect(hot[i],hot[i+1],2,2);
+    if(prog<1){countEl.textContent=fmt(shown*40)+' Punkte'}
+    else{stateEl.textContent='Scan abgeschlossen';countEl.textContent=fmt(total*40)+' Punkte'}
+    if(!still&&vis) requestAnimationFrame(draw);
+  }
+  new IntersectionObserver(e=>{const v=e[0].isIntersecting;if(v&&!vis&&!still){vis=true;requestAnimationFrame(draw)}vis=v}).observe(c);
+  addEventListener('resize',()=>{size();if(still)requestAnimationFrame(draw)});
+  size();requestAnimationFrame(draw);
+})();
 </script>
 </body>
 </html>
