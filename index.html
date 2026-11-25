@@ -9,7 +9,7 @@
 <meta property="og:description" content="3D-Laserscanning, Punktwolken, CAD und BIM für Architekten, Ingenieurbüros, Eigentümer und Projektentwickler.">
 <meta property="og:image" content="https://digitalevermessung.de/wp-content/uploads/go-x/u/5f047e50-3546-4aca-a8a0-b9fe5f086a11/image.jpg">
 <meta name="theme-color" content="#0f2440">
-<link rel="icon" href="https://www.digitalevermessung.de/wp-content/uploads/go-x/u/0f4295d5-a83b-4920-9446-77b3e6e1f7d2/image-455x455.jpg">
+<link rel="icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -55,7 +55,7 @@ h3{font-size:1.2rem;font-weight:700;font-stretch:105%}
 .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
 .brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--head);font-weight:800;font-stretch:112%;font-size:1.05rem}
-.brand img{width:38px;height:38px;border-radius:4px;object-fit:cover}
+.brand img{height:44px;width:auto}
 .nav{display:flex;align-items:center;gap:1.7rem}
 .nav a{text-decoration:none;font-weight:600;font-size:.98rem}
 .nav a:not(.btn):hover{color:var(--laser)}
@@ -127,9 +127,9 @@ a.svc:hover h3{color:var(--laser)}
 .refs p{color:var(--ink-soft);font-size:.98rem;margin-top:.4rem}
 
 /* Über uns */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
 .about img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;background:var(--line)}
-.about ul{list-style:none;margin-top:1.4rem}
+.about ul{list-style:none;border-top:2px solid var(--ink)}
 .about li{padding:.75rem 0 .75rem 1.6rem;border-bottom:1px solid var(--line);position:relative}
 .about li::before{content:"";position:absolute;left:0;top:1.3rem;width:9px;height:9px;background:var(--laser);border-radius:50%}
 
@@ -207,7 +207,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
 
 <header class="top">
   <div class="wrap">
-    <a href="#" class="brand"><img src="https://www.digitalevermessung.de/wp-content/uploads/go-x/u/0f4295d5-a83b-4920-9446-77b3e6e1f7d2/image-455x455.jpg" alt="">Digitale Vermessung</a>
+    <a href="#" class="brand"><img src="img/logo.png" alt="Digitale Vermessung"></a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menü</button>
     <nav class="nav" id="nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
@@ -360,10 +360,11 @@ footer .brand{color:#fff;margin-bottom:1rem}
 
 <section class="band band-paper" id="ueber-uns">
   <div class="wrap about">
-    <img src="https://www.digitalevermessung.de/wp-content/uploads/go-x/u/aa31a5dd-c432-4220-8250-4ab6528943d2/l0,t539,w923,h923/image.jpg" alt="Laserscanner bei der Vermessung eines Gebäudes" loading="lazy">
     <div>
       <h2>Präzise erfasst, sinnvoll aufbereitet</h2>
       <p class="intro">Digitale Vermessung wurde gegründet, um Architekten, Ingenieuren und Immobilienbesitzern moderne Vermessungslösungen anzubieten.</p>
+    </div>
+    <div>
       <ul>
         <li>Zertifizierte Fachleute begleiten Sie vom ersten Kontakt bis zum Projektabschluss.</li>
         <li>Sie haben einen festen, persönlichen Ansprechpartner.</li>
@@ -423,7 +424,7 @@ footer .brand{color:#fff;margin-bottom:1rem}
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <a href="#" class="brand"><img src="https://www.digitalevermessung.de/wp-content/uploads/go-x/u/0f4295d5-a83b-4920-9446-77b3e6e1f7d2/image-455x455.jpg" alt="">Digitale Vermessung</a>
+        <a href="#" class="brand">Digitale Vermessung</a>
         <p style="max-width:32ch">Präzise Bestandsdaten für sichere Planung. Aus Ingolstadt, bundesweit im Einsatz.</p>
       </div>
       <div><h4>Leistungen</h4><ul>
