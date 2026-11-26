@@ -1,0 +1,17 @@
+Hochladen bei IONOS
+
+Voraussetzung: ein IONOS Webhosting-Paket mit Webspace. Der Baukasten "MyWebsite" reicht nicht,
+dort lassen sich keine eigenen Dateien hochladen.
+
+1. Bei IONOS anmelden, Menue "Hosting" oeffnen, dann "Webspace" (Webspace Explorer).
+2. Einen neuen Ordner anlegen, zum Beispiel "vermessung".
+3. Die ZIP-Datei auf dem PC entpacken. ALLE Dateien und Ordner daraus in diesen Ordner hochladen.
+   Wichtig: Die Datei ".htaccess" muss dabei sein. Unter Windows im Explorer
+   "Ansicht > Ausgeblendete Elemente" einschalten, damit sie sichtbar ist.
+4. Menue "Domains & SSL": bei digitalevermessung.de "Verwendungsart anpassen" waehlen,
+   "Webspace" auswaehlen und den Ordner "vermessung" als Ziel eintragen.
+5. Pruefen, dass das SSL-Zertifikat fuer die Domain aktiv ist (Schloss-Symbol).
+6. Im IONOS-Konto den Vertrag zur Auftragsverarbeitung (AVV) abschliessen.
+7. Vorher: gelbe Felder in impressum.html und datenschutz.html ausfuellen.
+
+Die Datei ANLEITUNG-IONOS.txt muss nicht hochgeladen werden.

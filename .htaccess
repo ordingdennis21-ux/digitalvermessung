@@ -13,3 +13,29 @@ RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 Options -Indexes
+
+# Einheitliche Adresse mit www
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_HOST} ^digitalevermessung\.de$ [NC]
+RewriteRule ^ https://www.digitalevermessung.de%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Alte Adressen der bisherigen Seite auf die neue Startseite leiten
+RedirectMatch 301 ^/(unsere-leistungen|referenzen|ueber-uns|unsere-standorte|blog|kontakt)(/.*)?$ /
+Redirect 301 /datenschutzerklaerung/ /datenschutz.html
+Redirect 301 /impressum/ /impressum.html
+
+ErrorDocument 404 /index.html
+
+# Schnellere Auslieferung
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
