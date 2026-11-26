@@ -1,19 +1,16 @@
-# Digitale Vermessung: Relaunch-Entwurf
+# Digitale Vermessung: neue Website
 
-Neuer Entwurf für www.digitalevermessung.de. Inhalte stammen von der bestehenden Website, Aufbau und Design orientieren sich an führenden Anbietern aus Laserscanning und Reality Capture.
+Statische Website ohne Datenbank, ohne Login, ohne Cookies und ohne fremde Dienste.
 
 ## Dateien
 
-- `index.html`: komplette Startseite (eine Datei, kein Build nötig)
-- `impressum.html`: Impressum-Vorlage, gelb markierte Felder müssen ergänzt werden
+- `index.html`: Startseite
+- `impressum.html`, `datenschutz.html`: Rechtstexte. Gelb markierte Felder vor dem Livegang ausfüllen
+- `css/`, `js/`, `fonts/`, `img/`: Gestaltung, Skript, lokal eingebundene Schriften, Bilder
+- `.htaccess` (Apache) und `_headers` (Netlify, Cloudflare Pages): Sicherheits-Header für den späteren Hoster
 
-## Ansehen
+## Vorschau
 
-`index.html` im Browser öffnen oder GitHub Pages für diesen Branch aktivieren.
+https://ordingdennis21-ux.github.io/digitalvermessung/
 
-## Vor dem Livegang offen
-
-- Impressum: Inhaber, Anschrift, USt-IdNr. fehlen auf der aktuellen Seite
-- Standort: Leistungsseiten nennen Ingolstadt, die Standortseite Bad Zwischenahn. Entwurf nutzt Ingolstadt
-- Kennzahlen (500+, 15, 98 %) und Referenzen bitte freigeben
-- Bilder werden aktuell von der bestehenden Website geladen
+Der Branch `gh-pages` liefert die Vorschau aus und muss dem Stand von `main` entsprechen.
