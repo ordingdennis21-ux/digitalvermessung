@@ -10,7 +10,7 @@
 <meta property="og:title" content="Digitale Vermessung | Präzise Bestandsdaten für sichere Planung">
 <meta property="og:description" content="3D-Laserscanning, Punktwolken, CAD und BIM für Architekten, Ingenieurbüros, Eigentümer und Projektentwickler.">
 <meta property="og:image" content="https://www.digitalevermessung.de/img/punktwolke-fassade.jpg">
-<meta name="theme-color" content="#0f2440">
+<meta name="theme-color" content="#081425">
 <link rel="canonical" href="https://www.digitalevermessung.de/">
 <link rel="icon" href="img/icon.png">
 <link rel="preload" href="fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
@@ -39,20 +39,28 @@
 
 <main>
 <section class="hero">
+  <div class="scan" role="img" aria-label="Animation: Ein Gebäude wird per Laserscan Punkt für Punkt erfasst">
+    <canvas id="cloud"></canvas>
+    <div class="scan-note"><i></i><span id="scanState">Scan läuft</span><b id="scanCount">0 Punkte</b></div>
+  </div>
   <div class="wrap">
-    <div class="hero-text">
-      <h1>Präzise Bestandsdaten für sichere Planung</h1>
+    <div class="hero-text glass">
+      <p class="eyebrow">3D-Laserscanning, CAD und BIM aus Ingolstadt</p>
+      <h1>Präzise Bestandsdaten. <span class="grad">Sichere Planung.</span></h1>
       <p>Als Vermessungsbüro erfassen wir Gebäude, Innenräume, Fassaden und Außenbereiche mit 3D-Laserscanning und Drohnenvermessung. Die Daten bereiten wir für Ihre weitere Planung auf.</p>
       <div class="cta-row">
         <a href="#kontakt" class="btn btn-main">Vermessungsprojekt anfragen</a>
         <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
       </div>
-      <p class="who">Für Architekten, Ingenieurbüros, Bauherren und Projektentwickler. Sitz in Ingolstadt, Projekte in ganz Deutschland.</p>
     </div>
-    <div class="scan" role="img" aria-label="Animation: Ein Gebäude wird per Laserscan Punkt für Punkt erfasst">
-      <canvas id="cloud"></canvas>
-      <div class="scan-note"><i></i><span id="scanState">Scan läuft</span><b id="scanCount">0 Punkte</b></div>
-    </div>
+  </div>
+  <div class="wrap">
+    <ul class="hero-strip">
+      <li><b>Millimetergenau</b><span>Messgenauigkeit im Regelfall</span></li>
+      <li><b>Im laufenden Betrieb</b><span>ohne Stillstand bei Ihnen</span></li>
+      <li><b>Punktwolke, CAD, BIM</b><span>in Ihrem Datenformat</span></li>
+      <li><b>Deutschlandweit</b><span>Sitz in Ingolstadt</span></li>
+    </ul>
   </div>
 </section>
 
@@ -62,14 +70,14 @@
       <li><b>500+</b><span>abgeschlossene Projekte</span></li>
       <li><b>15</b><span>zertifizierte Fachleute</span></li>
       <li><b>98 %</b><span>zufriedene Kunden</span></li>
-      <li><b>Millimeter</b><span>Messgenauigkeit im Regelfall</span></li>
     </ul>
   </div>
 </section>
 
 <section class="band" id="leistungen">
   <div class="wrap">
-    <h2>Was wir für Sie erfassen und liefern</h2>
+    <p class="eyebrow">Leistungen</p>
+    <h2>Vom Scan vor Ort <span class="grad">bis zum fertigen Modell</span></h2>
     <p class="intro">Sie bekommen genau das Ergebnis, das Ihr Projekt braucht. Von der Punktwolke bis zum fertigen Gebäudemodell.</p>
     <div class="services">
       <a class="svc" href="#kontakt">
@@ -131,7 +139,8 @@
       <figcaption>Punktwolke einer Fassade, eingefärbt nach Höhe</figcaption>
     </figure>
     <div>
-      <h2>Was Sie erhalten</h2>
+      <p class="eyebrow">Ergebnisse</p>
+    <h2>Daten, mit denen Sie <span class="grad">sofort weiterplanen</span></h2>
       <p class="intro">Wir liefern genau die Daten, die Ihr Projekt braucht. Und zwar so aufbereitet, dass Sie in Architektur, Planung und Abstimmung direkt damit arbeiten können.</p>
       <ul>
         <li>Georeferenzierte Punktwolken</li>
@@ -143,9 +152,57 @@
   </div>
 </section>
 
+<section class="band" id="pakete">
+  <div class="wrap">
+    <p class="eyebrow">Drei Wege zum Ergebnis</p>
+    <h2>Sie wählen das Ergebnis, <span class="grad">wir liefern die Daten</span></h2>
+    <p class="intro">Jedes Projekt beginnt mit dem Scan vor Ort. Wie weit wir die Daten für Sie aufbereiten, entscheiden Sie.</p>
+    <div class="packs">
+      <article class="pack">
+        <p class="pack-tag">Scan</p>
+        <h3>Punktwolke</h3>
+        <p>Für Büros, die selbst modellieren und zeichnen.</p>
+        <ul>
+          <li>3D-Laserscan innen und außen</li>
+          <li>Registrierte, geprüfte Punktwolke</li>
+          <li>Georeferenziert</li>
+          <li>E57, RCP, RCS oder LAS</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-ghost">Punktwolke anfragen</a>
+      </article>
+      <article class="pack pack-hi">
+        <p class="pack-tag">Scan und Plan</p>
+        <h3>Punktwolke mit CAD-Plänen</h3>
+        <p>Für Architektur, Umbau und Sanierung.</p>
+        <ul>
+          <li>Alles aus dem Paket Scan</li>
+          <li>Grundrisse, Schnitte, Ansichten</li>
+          <li>2D-Bestandszeichnungen</li>
+          <li>DWG, DXF und PDF</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-main">Pläne anfragen</a>
+      </article>
+      <article class="pack">
+        <p class="pack-tag">Scan und Modell</p>
+        <h3>Punktwolke mit BIM-Modell</h3>
+        <p>Für Planung, Koordination und Betrieb.</p>
+        <ul>
+          <li>Alles aus dem Paket Scan</li>
+          <li>3D-Bestandsmodell</li>
+          <li>Grundlage für Flächen und Massen</li>
+          <li>IFC, Revit oder Archicad</li>
+        </ul>
+        <a href="#kontakt" class="btn btn-ghost">Modell anfragen</a>
+      </article>
+    </div>
+    <p class="packs-note">Den Preis nennen wir Ihnen nach einer kurzen Abstimmung zu Objekt, Fläche und Detailgrad.</p>
+  </div>
+</section>
+
 <section class="band band-ink" id="ablauf">
   <div class="wrap">
-    <h2>In fünf Schritten vom Gebäude zum Datensatz</h2>
+    <p class="eyebrow">Ablauf</p>
+    <h2>Fünf Schritte vom Gebäude <span class="grad">zum Datensatz</span></h2>
     <p class="intro">Kleinere Gebäude sind oft an einem Tag erfasst. Größere Industrieanlagen brauchen entsprechend mehr Zeit.</p>
     <ol class="chain">
       <li><h3>Projektanalyse</h3><p>Wir klären Ihr Vorhaben und legen den Umfang der Vermessung fest.</p></li>
@@ -160,7 +217,8 @@
 <section class="band">
   <div class="wrap two">
     <div>
-      <h2>Leistungen für Ihre Planung</h2>
+      <p class="eyebrow">Einsatzfälle</p>
+    <h2>Leistungen für <span class="grad">Ihre Planung</span></h2>
       <p class="intro">Ob Wohngebäude, Gewerbeobjekt oder komplexer Gebäudebestand: Wir unterstützen Architekten, Ingenieure, Bauunternehmen und öffentliche Auftraggeber.</p>
     </div>
     <ul class="tasks">
@@ -179,7 +237,8 @@
 
 <section class="band flush-top">
   <div class="wrap">
-    <h2>Formate, die in Ihre Software passen</h2>
+    <p class="eyebrow">Datenformate</p>
+    <h2>Formate, die in <span class="grad">Ihre Software passen</span></h2>
     <table class="formats">
       <tr><th scope="row">Punktwolke</th><td><code>E57</code><code>RCP</code><code>RCS</code><code>LAS</code></td></tr>
       <tr><th scope="row">CAD</th><td><code>DWG</code><code>DXF</code></td></tr>
@@ -191,7 +250,8 @@
 
 <section class="band band-paper" id="einblicke">
   <div class="wrap">
-    <h2>Einblicke in unsere Daten</h2>
+    <p class="eyebrow">Einblicke</p>
+    <h2>So sehen <span class="grad">unsere Daten aus</span></h2>
     <p class="intro">So sehen die Ergebnisse aus: Punktwolken und Modelle aus echten Projekten.</p>
   </div>
   <div class="gallery" tabindex="0" aria-label="Bildergalerie, seitlich scrollbar">
@@ -205,7 +265,8 @@
 
 <section class="band" id="referenzen">
   <div class="wrap">
-    <h2>Vermessen, während der Betrieb weiterläuft</h2>
+    <p class="eyebrow">Referenzen</p>
+    <h2>Vermessen, während <span class="grad">der Betrieb weiterläuft</span></h2>
     <p class="intro">Produktion, Verkauf und Dienstbetrieb müssen für unsere Arbeit nicht unterbrochen werden.</p>
     <div class="lead-ref">
       <div class="num"><b>500.000 m²</b><span>in zehn Tagen erfasst</span></div>
@@ -227,7 +288,8 @@
   <div class="wrap about">
     <img src="img/scanner-halle.jpg" alt="Mobiler Scanner bei der Erfassung einer Industriehalle" loading="lazy">
     <div>
-      <h2>Präzise erfasst, sinnvoll aufbereitet</h2>
+      <p class="eyebrow">Über uns</p>
+    <h2>Präzise erfasst, <span class="grad">sinnvoll aufbereitet</span></h2>
       <p class="intro">Digitale Vermessung wurde gegründet, um Architekten, Ingenieuren und Immobilienbesitzern modernste Vermessungslösungen zu bieten. Unser Ziel: präzise Daten als solide Grundlage für erfolgreiche Planungen.</p>
       <ul>
         <li>Zertifizierte Fachleute begleiten Sie vom ersten Kontakt bis zum Projektabschluss.</li>
@@ -240,7 +302,8 @@
 
 <section class="band" id="faq">
   <div class="wrap">
-    <h2>Häufige Fragen</h2>
+    <p class="eyebrow">FAQ</p>
+    <h2>Häufige Fragen, <span class="grad">kurz beantwortet</span></h2>
     <div class="faq">
       <details><summary>Wie genau sind die Messungen?</summary><p>Moderne Laserscanner erreichen im Regelfall Messgenauigkeiten im Millimeterbereich. Die Genauigkeit richtet sich nach Projektumfang und Ihren Anforderungen.</p></details>
       <details><summary>Wie lange dauert die Erfassung?</summary><p>Kleinere Gebäude sind oft an einem Tag erfasst. Größere Industrieanlagen brauchen mehr Zeit. Bei Audi in Puebla waren es rund 500.000 m² in zehn Tagen.</p></details>
@@ -254,7 +317,8 @@
 <section class="band band-ink" id="kontakt">
   <div class="wrap contact">
     <div>
-      <h2>Sprechen wir über Ihr Projekt</h2>
+      <p class="eyebrow">Kontakt</p>
+    <h2>Lassen Sie Ihr Gebäude <span class="grad">einmal durchmessen</span></h2>
       <p class="intro">Beschreiben Sie kurz Objekt, Ort und gewünschtes Ergebnis. Wir melden uns mit einer Einschätzung zu Umfang und Ablauf.</p>
       <div class="direct">
         <a href="tel:+4915201300728">+49 1520 1300728</a>
